@@ -10,9 +10,12 @@ function MoviesPage({ movies }) {
   return (
     <div>
       <MoviesList movies={movies} />
-
+        
+         <Route path={match.url}>
+          <h3>Choose the movie which delights you the most</h3>
+         </Route>
       <Route path={`${match.url}/:movieId`}>
-        <MoviesShow />
+        <MoviesShow movies={movies} />
       </Route>
     </div>
   );
