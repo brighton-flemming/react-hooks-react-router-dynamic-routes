@@ -12,6 +12,7 @@ function MoviesPage({ movies }) {
       <MoviesList movies={movies} />
 
       <Route path={`${match.url}/:movieId`}>
+        <MoviesShow />
       </Route>
     </div>
   );
